@@ -1,0 +1,99 @@
+{
+    "nav": {
+      "work": "Work",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "hero": {
+      "eyebrow": "Creative Studio",
+      "titleLine1": "Ali",
+      "titleLine2": "Seglead",
+      "description": "We build premium websites, visual identities and digital experiences for brands that want to look sharp.",
+      "availability": "Available for work",
+      "location": "Istanbul, Türkiye"
+    },
+    "work": {
+      "eyebrow": "Selected Projects",
+      "title": "Work",
+      "projects": {
+        "seglead": {
+          "title": "Seglead — Premium Creative Studio Platform",
+          "subtitle": "Seglead.com / 2026",
+          "tags": {
+            "one": "Brand",
+            "two": "Web Design",
+            "three": "Development"
+          },
+          "stats": {
+            "oneLabel": "Conversion focus",
+            "oneValue": "+High",
+            "twoLabel": "UX clarity",
+            "twoValue": "A+"
+          }
+        },
+        "growth": {
+          "title": "Finding the right incentive to double referrals",
+          "subtitle": "Growth / 2025 - 2026",
+          "tags": {
+            "one": "Growth",
+            "two": "Referral"
+          },
+          "stats": {
+            "oneLabel": "Referral increase",
+            "oneValue": "+2.1x",
+            "twoLabel": "Activation boost",
+            "twoValue": "+31%"
+          }
+        }
+      }
+    },
+    "aboutSection": {
+      "eyebrow": "About Seglead",
+      "title": "About",
+      "intro": "Seglead creates premium websites, visual systems, and digital experiences designed to elevate perception and sharpen brand presence.",
+      "paragraph1": "We focus on strong hierarchy, refined interaction, and modern visual language to make brands feel more credible, more polished, and more memorable.",
+      "paragraph2": "From positioning to interface, every detail is built to improve clarity, trust, and the overall impression your brand leaves.",
+      "capabilities": {
+        "brandDirection": {
+          "title": "Brand Direction",
+          "description": "Positioning visual language, tone, and digital presence into one sharp system."
+        },
+        "premiumWebDesign": {
+          "title": "Premium Web Design",
+          "description": "Luxury-feel interfaces built to look modern, credible, and high-converting."
+        },
+        "creativeDevelopment": {
+          "title": "Creative Development",
+          "description": "Fast, polished frontend implementation with smooth motion and refined detail."
+        },
+        "uxStructure": {
+          "title": "UX Structure",
+          "description": "Clear information flow, better hierarchy, and stronger decision paths."
+        },
+        "conversionFocus": {
+          "title": "Conversion Focus",
+          "description": "Design choices shaped to improve trust, clarity, and action."
+        },
+        "multilingualExperiences": {
+          "title": "Multilingual Experiences",
+          "description": "English, Turkish, and Arabic-ready experiences with proper structure and direction."
+        }
+      }
+    },
+    "contactSection": {
+      "eyebrow": "Get in Touch",
+      "titleLine1": "Let's Build",
+      "titleLine2": "Something Sharp",
+      "description": "Have a brand, website, or digital direction project in mind? Seglead builds refined experiences that look premium, feel modern, and leave a stronger impression.",
+      "cta": "Start a Project",
+      "links": {
+        "email": "Email",
+        "website": "Website",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "upwork": "Upwork",
+        "location": "Location",
+        "upworkValue": "Available on Request"
+      }
+    }
+  }

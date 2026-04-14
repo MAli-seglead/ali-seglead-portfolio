@@ -1,0 +1,99 @@
+{
+    "nav": {
+      "work": "İşler",
+      "about": "Hakkında",
+      "contact": "İletişim"
+    },
+    "hero": {
+      "eyebrow": "Yaratıcı Stüdyo",
+      "titleLine1": "Ali",
+      "titleLine2": "Seglead",
+      "description": "Güçlü görünmek isteyen markalar için premium web siteleri, görsel kimlikler ve dijital deneyimler tasarlıyoruz.",
+      "availability": "Yeni işlere açık",
+      "location": "İstanbul, Türkiye"
+    },
+    "work": {
+      "eyebrow": "Seçili Projeler",
+      "title": "İşler",
+      "projects": {
+        "seglead": {
+          "title": "Seglead — Premium Yaratıcı Stüdyo Platformu",
+          "subtitle": "Seglead.com / 2026",
+          "tags": {
+            "one": "Marka",
+            "two": "Web Tasarım",
+            "three": "Geliştirme"
+          },
+          "stats": {
+            "oneLabel": "Dönüşüm odağı",
+            "oneValue": "+Yüksek",
+            "twoLabel": "UX netliği",
+            "twoValue": "A+"
+          }
+        },
+        "growth": {
+          "title": "Yönlendirmeleri iki katına çıkaracak doğru teşviki bulmak",
+          "subtitle": "Büyüme / 2025 - 2026",
+          "tags": {
+            "one": "Büyüme",
+            "two": "Referans"
+          },
+          "stats": {
+            "oneLabel": "Referans artışı",
+            "oneValue": "+2.1x",
+            "twoLabel": "Aktivasyon artışı",
+            "twoValue": "+31%"
+          }
+        }
+      }
+    },
+    "aboutSection": {
+      "eyebrow": "Seglead Hakkında",
+      "title": "Hakkında",
+      "intro": "Seglead, algıyı yükseltmek ve marka varlığını keskinleştirmek için premium web siteleri, görsel sistemler ve dijital deneyimler üretir.",
+      "paragraph1": "Markaların daha güvenilir, daha rafine ve daha akılda kalıcı görünmesi için güçlü hiyerarşi, rafine etkileşim ve modern görsel dil üzerine odaklanıyoruz.",
+      "paragraph2": "Konumlandırmadan arayüze kadar her detay, netliği, güveni ve markanızın bıraktığı genel etkiyi güçlendirmek için tasarlanır.",
+      "capabilities": {
+        "brandDirection": {
+          "title": "Marka Yönü",
+          "description": "Görsel dil, ton ve dijital varlığı tek ve keskin bir sistemde birleştirmek."
+        },
+        "premiumWebDesign": {
+          "title": "Premium Web Tasarım",
+          "description": "Modern, güvenilir ve dönüşüm odaklı görünen lüks arayüzler."
+        },
+        "creativeDevelopment": {
+          "title": "Yaratıcı Geliştirme",
+          "description": "Akıcı hareket ve rafine detaylarla hızlı, temiz frontend geliştirme."
+        },
+        "uxStructure": {
+          "title": "UX Yapısı",
+          "description": "Daha net bilgi akışı, daha iyi hiyerarşi ve daha güçlü karar yolları."
+        },
+        "conversionFocus": {
+          "title": "Dönüşüm Odağı",
+          "description": "Güven, netlik ve aksiyonu artırmak için şekillenen tasarım kararları."
+        },
+        "multilingualExperiences": {
+          "title": "Çok Dilli Deneyimler",
+          "description": "İngilizce, Türkçe ve Arapça için doğru yapı ve yön desteğiyle deneyimler."
+        }
+      }
+    },
+    "contactSection": {
+      "eyebrow": "İletişime Geç",
+      "titleLine1": "Keskin Bir Şey",
+      "titleLine2": "Birlikte İnşa Edelim",
+      "description": "Aklınızda bir marka, web sitesi veya dijital yön projesi mi var? Seglead; premium görünen, modern hissettiren ve daha güçlü bir iz bırakan deneyimler oluşturur.",
+      "cta": "Proje Başlat",
+      "links": {
+        "email": "E-posta",
+        "website": "Web Sitesi",
+        "linkedin": "LinkedIn",
+        "github": "GitHub",
+        "upwork": "Upwork",
+        "location": "Konum",
+        "upworkValue": "Talep üzerine mevcut"
+      }
+    }
+  }
