@@ -28,7 +28,7 @@ export default async function LocaleLayout({
     <div
       lang={safeLocale}
       dir={dir}
-      className={`${panchang.variable} min-h-screen bg-black text-neutral-100 antialiased`}
+      className={`${panchang.className} min-h-screen bg-black text-neutral-100 antialiased`}
     >
       <NextIntlClientProvider locale={safeLocale} messages={messages}>
         <Navbar />
