@@ -2,10 +2,21 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { arabicDisplay, panchang } from "@/lib/fonts";
 
 export default function WorkSection() {
   const t = useTranslations("work");
+  const locale = useLocale();
+  const isArabic = locale === "ar";
+
+  const sectionTitleClass = isArabic
+    ? `${arabicDisplay.className} mb-6 text-[42px] font-bold leading-[0.95] tracking-[0em] text-neutral-100 md:mb-8 md:text-8xl`
+    : `${panchang.className} mb-6 text-[42px] font-semibold uppercase leading-[0.9] tracking-[-0.065em] text-neutral-100 md:mb-8 md:text-8xl`;
+
+  const cardTitleClass = isArabic
+    ? `${arabicDisplay.className} max-w-[420px] text-[20px] font-bold leading-[1.4] tracking-[0em] text-neutral-100 md:text-[2.45vw] md:leading-[1.25]`
+    : `max-w-[420px] text-[20px] font-semibold leading-[1.2] tracking-[-0.02em] text-neutral-100 md:max-w-[520px] md:text-[2.2vw] md:leading-[1.1]`;
 
   const projects = [
     {
@@ -55,7 +66,10 @@ export default function WorkSection() {
   ];
 
   return (
-    <section id="work" className="bg-black px-5 py-24 text-white md:px-6 md:py-36">
+    <section
+      id="work"
+      className={`bg-black px-5 py-24 text-white md:px-6 md:py-36 ${isArabic ? "text-right" : "text-left"}`}
+    >
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 26 }}
@@ -63,25 +77,48 @@ export default function WorkSection() {
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="mb-5 text-[10px] uppercase tracking-[0.35em] text-white/35 md:mb-6 md:text-xs">
+          <p
+            className={`mb-5 text-[10px] text-white/35 md:mb-6 md:text-xs ${
+              isArabic
+                ? `${arabicDisplay.className} tracking-[0em]`
+                : "uppercase tracking-[0.35em]"
+            }`}
+          >
             {t("eyebrow")}
           </p>
 
-          <h2 className="mb-10 text-[42px] font-bold uppercase tracking-[-0.08em] text-neutral-100 md:mb-16 md:text-8xl">
-            {t("title")}
-          </h2>
+          <h2 className={sectionTitleClass}>{t("title")}</h2>
+
+          <p
+            className={`max-w-[520px] text-[14px] leading-7 text-white/55 md:text-[16px] md:leading-8 ${
+              isArabic ? `${arabicDisplay.className} tracking-[0em]` : ""
+            }`}
+          >
+            {t("description")}
+          </p>
         </motion.div>
 
-        <div className="space-y-5 md:space-y-8">
+        <div className="mt-10 space-y-5 md:mt-14 md:space-y-8">
           {projects.map((project, index) => {
             const content = (
               <div className="grid md:grid-cols-[0.98fr_1.02fr]">
                 <div className="flex flex-col justify-between p-5 md:p-12">
-                  <div>
-                    <div className="mb-5 flex items-center justify-between gap-4 md:mb-6">
-                      <span className="text-xs text-white/35 md:text-sm">{project.id}</span>
+                  <div className="max-w-[420px] md:max-w-[520px]">
+                    <div
+                      className={`mb-5 flex items-center gap-4 md:mb-6 ${
+                        isArabic ? "justify-between flex-row-reverse" : "justify-between"
+                      }`}
+                    >
+                      <span
+                        className={`text-xs text-white/35 md:text-sm ${
+                          isArabic ? arabicDisplay.className : ""
+                        }`}
+                      >
+                        {project.id}
+                      </span>
+
                       <motion.span
-                        variants={{ hover: { x: 4, y: -4 } }}
+                        variants={{ hover: { x: isArabic ? -4 : 4, y: -4 } }}
                         transition={{ duration: 0.35 }}
                         className="text-2xl text-white/30 transition group-hover:text-white/75 md:text-3xl"
                       >
@@ -89,15 +126,27 @@ export default function WorkSection() {
                       </motion.span>
                     </div>
 
-                    <p className="mb-4 text-xs text-white/45 md:text-sm">
+                    <p
+                      className={`mb-3 text-[11px] text-white/40 md:text-sm ${
+                        isArabic ? `${arabicDisplay.className} tracking-[0em]` : ""
+                      }`}
+                    >
                       {project.subtitle}
                     </p>
 
-                    <div className="mb-6 flex flex-wrap gap-2 md:mb-7 md:gap-3">
+                    <div
+                      className={`mb-4 flex flex-wrap gap-2 ${
+                        isArabic ? "justify-end" : ""
+                      }`}
+                    >
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="rounded-full border border-white/10 px-2.5 py-1 text-[10px] uppercase tracking-[0.18em] text-white/55 md:px-3 md:text-[11px]"
+                          className={`rounded-full border border-white/10 px-2.5 py-1 text-white/55 md:px-3 ${
+                            isArabic
+                              ? `${arabicDisplay.className} text-[11px] tracking-[0em]`
+                              : "text-[10px] uppercase tracking-[0.18em] md:text-[11px]"
+                          }`}
                         >
                           {tag}
                         </span>
@@ -107,19 +156,32 @@ export default function WorkSection() {
                     <motion.h3
                       variants={{ hover: { y: -2 } }}
                       transition={{ duration: 0.35 }}
-                      className="max-w-xl text-[18px] font-semibold leading-[1.05] tracking-[-0.05em] text-neutral-100 md:text-6xl md:leading-[0.95]"
+                      className={cardTitleClass}
                     >
                       {project.title}
                     </motion.h3>
                   </div>
 
-                  <div className="mt-8 flex gap-7 md:mt-12 md:gap-12">
+                  <div className={`mt-6 flex gap-8 ${isArabic ? "justify-end" : ""}`}>
                     {project.stats.map((stat) => (
                       <div key={stat.label}>
-                        <div className="text-[16px] font-semibold tracking-[-0.05em] md:text-5xl">
+                        <div
+                          className={`text-[18px] font-semibold text-white md:text-[28px] ${
+                            isArabic
+                              ? `${arabicDisplay.className} tracking-[0em]`
+                              : ""
+                          }`}
+                        >
                           {stat.value}
                         </div>
-                        <div className="mt-1.5 text-[11px] leading-5 text-white/42 md:mt-2 md:text-sm md:leading-6">
+
+                        <div
+                          className={`mt-1 text-[11px] text-white/40 ${
+                            isArabic
+                              ? `${arabicDisplay.className} leading-[1.9] tracking-[0em]`
+                              : ""
+                          }`}
+                        >
                           {stat.label}
                         </div>
                       </div>

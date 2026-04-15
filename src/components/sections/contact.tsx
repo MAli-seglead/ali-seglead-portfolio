@@ -2,37 +2,44 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { panchang } from "@/lib/fonts";
 
 export default function ContactSection() {
   const t = useTranslations("contactSection");
 
   const contactLinks = [
     {
+      id: "email",
       label: t("links.email"),
       value: "m.ali@seglead.com",
       href: "mailto:m.ali@seglead.com"
     },
     {
+      id: "website",
       label: t("links.website"),
       value: "seglead.com",
       href: "https://seglead.com"
     },
     {
+      id: "linkedin",
       label: t("links.linkedin"),
       value: "abdulrahman mohamed ali",
       href: "https://www.linkedin.com/in/abdulrahman-mohamed-ali-249051345/"
     },
     {
+      id: "github",
       label: t("links.github"),
       value: "MAli-seglead",
       href: "https://github.com/MAli-seglead"
     },
     {
+      id: "upwork",
       label: t("links.upwork"),
       value: t("links.upworkValue"),
       href: "#"
     },
     {
+      id: "location",
       label: t("links.location"),
       value: "Istanbul, Türkiye",
       href: "#"
@@ -59,7 +66,9 @@ export default function ContactSection() {
             {t("eyebrow")}
           </p>
 
-          <h2 className="max-w-5xl text-[42px] font-bold uppercase leading-[0.9] tracking-[-0.08em] text-neutral-100 md:text-8xl xl:text-[9rem]">
+          <h2
+            className={`${panchang.className} max-w-5xl text-[42px] font-semibold uppercase leading-[0.88] tracking-[-0.065em] text-neutral-100 md:text-8xl xl:text-[9rem]`}
+          >
             {t("titleLine1")}
             <br />
             {t("titleLine2")}
@@ -112,7 +121,7 @@ export default function ContactSection() {
 
               return (
                 <motion.div
-                  key={item.label}
+                  key={item.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}

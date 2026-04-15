@@ -13,6 +13,7 @@
       "location": "İstanbul, Türkiye"
     },
     "work": {
+      "description": "Performans, netlik ve premium dijital deneyim odaklı projelerden seçmeler.",
       "eyebrow": "Seçili Projeler",
       "title": "İşler",
       "projects": {
@@ -82,7 +83,7 @@
     },
     "contactSection": {
       "eyebrow": "İletişime Geç",
-      "titleLine1": "Keskin Bir Şey",
+      "titleLine1": "MARKANI",
       "titleLine2": "Birlikte İnşa Edelim",
       "description": "Aklınızda bir marka, web sitesi veya dijital yön projesi mi var? Seglead; premium görünen, modern hissettiren ve daha güçlü bir iz bırakan deneyimler oluşturur.",
       "cta": "Proje Başlat",

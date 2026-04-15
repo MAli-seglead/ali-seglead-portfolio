@@ -1,10 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import ThemeProvider from "@/components/theme-provider";
+import { panchang } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "Ali Seglead",
-  description: "Premium multilingual portfolio built with Next.js"
+  description: "Portfolio"
 };
 
 export default function RootLayout({
@@ -13,10 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
+    <html lang="en" className={panchang.variable}>
+      <body>{children}</body>
     </html>
   );
 }

@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
 import LocaleSwitcher from "@/components/layout/locale-switcher";
-import ThemeToggle from "@/components/theme-toggle";
 import { Link } from "@/i18n/navigation";
+
 
 export default function Navbar() {
   const locale = useLocale();
@@ -17,9 +17,14 @@ export default function Navbar() {
 
   useEffect(() => {
     setMounted(true);
-    const onScroll = () => setScrolled(window.scrollY > 80);
+
+    const onScroll = () => {
+      setScrolled(window.scrollY > 80);
+    };
+
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
+
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -47,6 +52,8 @@ export default function Navbar() {
                   transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                   className="absolute inset-0"
                 >
+
+                    
                   <div className="flex h-full items-center justify-between">
                     <Link
                       href="/"
@@ -56,13 +63,16 @@ export default function Navbar() {
                       ali seglead
                     </Link>
 
-                    <div className="hidden items-center gap-4 md:flex">
+                    <div className="hidden items-center gap-5 md:flex">
                       <DesktopLinks t={t} />
-                      <ThemeToggle />
                       <LocaleSwitcher bubble={false} />
                     </div>
 
-                    <MobileMenuButton onClick={() => setMenuOpen(true)} />
+                    <MobileMenuButton
+                      open={menuOpen}
+                      onClick={() => setMenuOpen(true)}
+                      bubble={false}
+                    />
                   </div>
                 </motion.div>
               ) : (
@@ -83,13 +93,16 @@ export default function Navbar() {
                       ali seglead
                     </Link>
 
-                    <div className="hidden items-center gap-4 md:flex">
+                    <div className="hidden items-center gap-5 md:flex">
                       <DesktopLinks t={t} compact />
-                      <ThemeToggle />
                       <LocaleSwitcher bubble />
                     </div>
 
-                    <MobileMenuButton onClick={() => setMenuOpen(true)} />
+                    <MobileMenuButton
+                      open={menuOpen}
+                      onClick={() => setMenuOpen(true)}
+                      bubble
+                    />
                   </div>
                 </motion.div>
               )}
@@ -184,12 +197,23 @@ export default function Navbar() {
                   ))}
                 </motion.nav>
 
-                <div className="mt-8 flex flex-col gap-4 border-t border-white/10 pt-6">
-                  <div className="flex items-center justify-between gap-3">
-                    <ThemeToggle />
-                    <LocaleSwitcher bubble />
+                <motion.div
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  transition={{ delay: 0.18, duration: 0.28 }}
+                  className="mt-8 flex flex-col gap-4 border-t border-white/10 pt-6"
+                >
+                  <LocaleSwitcher bubble />
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] uppercase tracking-[0.3em] text-white/35">
+                      Language
+                    </span>
+                    <span className="text-[11px] uppercase tracking-[0.3em] text-white/22">
+                      Menu
+                    </span>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </motion.div>
           </motion.div>
@@ -231,16 +255,25 @@ function DesktopLinks({
 }
 
 function MobileMenuButton({
-  onClick
+  open,
+  onClick,
+  bubble
 }: {
+  open: boolean;
   onClick: () => void;
+  bubble: boolean;
 }) {
   return (
     <button
       type="button"
-      aria-label="Open menu"
+      aria-label={open ? "Close menu" : "Open menu"}
       onClick={onClick}
-      className="flex h-11 w-11 items-center justify-center text-white transition-all duration-300 active:scale-95 md:hidden"
+      className={[
+        "flex h-11 w-11 items-center justify-center text-white transition-all duration-300 active:scale-95 md:hidden",
+        bubble
+          ? "rounded-full border border-white/10 bg-black/45 backdrop-blur-xl"
+          : "rounded-full border border-transparent bg-transparent"
+      ].join(" ")}
     >
       <div className="relative h-4 w-5">
         <span className="absolute left-0 top-0 block h-px w-5 bg-white" />

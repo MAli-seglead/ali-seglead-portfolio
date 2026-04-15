@@ -4,6 +4,8 @@
       "about": "About",
       "contact": "Contact"
     },
+
+    
     "hero": {
       "eyebrow": "Creative Studio",
       "titleLine1": "Ali",
@@ -13,6 +15,7 @@
       "location": "Istanbul, Türkiye"
     },
     "work": {
+      "description": "A selection of projects focused on performance, clarity and premium digital experience.",
       "eyebrow": "Selected Projects",
       "title": "Work",
       "projects": {
@@ -23,6 +26,7 @@
             "one": "Brand",
             "two": "Web Design",
             "three": "Development"
+            
           },
           "stats": {
             "oneLabel": "Conversion focus",
@@ -96,4 +100,8 @@
         "upworkValue": "Available on Request"
       }
     }
+
+    
   }
+
+  
