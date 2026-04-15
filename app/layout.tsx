@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { panchang } from "@/lib/fonts";
 
 export const metadata: Metadata = {
-  title: "Ali Seglead",
+  title: "Ali SegLead",
   description: "Portfolio"
 };
 

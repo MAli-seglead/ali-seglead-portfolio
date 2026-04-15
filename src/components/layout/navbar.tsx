@@ -60,7 +60,7 @@ export default function Navbar() {
                       locale={locale}
                       className="text-lg font-semibold tracking-tight text-white transition duration-300 hover:opacity-80 md:text-2xl"
                     >
-                      ali seglead
+                      Ali SegLead
                     </Link>
 
                     <div className="hidden items-center gap-5 md:flex">
@@ -90,7 +90,7 @@ export default function Navbar() {
                       locale={locale}
                       className="text-lg font-semibold tracking-tight text-white transition duration-300 hover:opacity-80"
                     >
-                      ali seglead
+                      Ali SegLead
                     </Link>
 
                     <div className="hidden items-center gap-5 md:flex">
@@ -145,7 +145,7 @@ export default function Navbar() {
                     onClick={closeMenu}
                     className="text-lg font-semibold tracking-tight text-white"
                   >
-                    ali seglead
+                    Ali SegLead
                   </Link>
 
                   <button
